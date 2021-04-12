@@ -26,6 +26,7 @@ public class EfficientElevator implements Elevator {
 	private LocalTime time;
 	private List<Integer> destinations = new ArrayList<>();
 	private String id;
+	private boolean imbusy = false ; 
     
 	public EfficientElevator(int capacity,String id) {
 		this.capacity = capacity;
@@ -177,6 +178,9 @@ public class EfficientElevator implements Elevator {
 		return this.id;
 	}
 
+	public boolean isImBusy() {
+		return this.imbusy;
+	}
 
 
 	

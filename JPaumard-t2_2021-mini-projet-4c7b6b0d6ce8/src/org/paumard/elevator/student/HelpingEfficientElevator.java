@@ -58,11 +58,23 @@ public class HelpingEfficientElevator implements Elevator {
     		}
     	}
     
-    	
+    	if(this.efficient.isImBusy() && countWaintingPeopleInFloorOne() > 0) {
+    		if(this.currentFloor == 1) {
+    			List<Person> waitingListForCurrentFloor = 
+						this.peopleByFloor.get(0);
+				
+				List<Integer> destinationFloorsForCurrentFloor = 
+						findDestinationFloors(waitingListForCurrentFloor);
+				this.destinations  = destinationFloorsForCurrentFloor;
+				return this.destinations;
+    		}
+    	}
         return List.of(1);
     }
     
-
+    private int countWaintingPeopleInFloorOne() {
+    	return peopleByFloor.get(0).size();
+	}
     
 	private List<Integer> findNonEmptyFloor() {
 		for (int indexFloor = 1 ; indexFloor < Building.MAX_FLOOR ; indexFloor++) {

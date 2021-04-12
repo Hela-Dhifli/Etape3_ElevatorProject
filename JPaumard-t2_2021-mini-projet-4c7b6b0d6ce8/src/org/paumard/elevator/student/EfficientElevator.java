@@ -1,5 +1,4 @@
-//BEN CHEIKH Makerem
-//DHIFLI Hela
+//BEN CHEIKH Makerem && DHIFLI Hela
 package org.paumard.elevator.student;
 
 import org.paumard.elevator.Building;
@@ -27,7 +26,6 @@ public class EfficientElevator implements Elevator {
 	private LocalTime time;
 	private List<Integer> destinations = new ArrayList<>();
 	private String id;
-	private boolean imbusy; 
     
 	public EfficientElevator(int capacity,String id) {
 		this.capacity = capacity;
@@ -179,9 +177,6 @@ public class EfficientElevator implements Elevator {
 		return this.id;
 	}
 
-	public boolean isImBusy() {
-		return this.imbusy;
-	}
 
 
 	

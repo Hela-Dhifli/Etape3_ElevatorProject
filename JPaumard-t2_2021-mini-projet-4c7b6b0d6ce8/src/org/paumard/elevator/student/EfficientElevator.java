@@ -52,9 +52,10 @@ public class EfficientElevator implements Elevator {
 		
 		
 		 if (!this.destinations.isEmpty()) {
+			 	this.imbusy = true;
 	    		return this.destinations;
 	     }
-    	
+		 this.imbusy = false;
 		 int numberOfPeopleWaiting = countWaitingPeople();
 		 
 		 if (numberOfPeopleWaiting > 0) {
@@ -78,7 +79,7 @@ public class EfficientElevator implements Elevator {
 				return this.destinations;
     		}
     	}
-    	
+		
     	return List.of(1);
     }
 

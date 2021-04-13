@@ -76,7 +76,7 @@ public class EfficientElevator implements Elevator {
 				List<Integer> destinationFloorsForCurrentFloor = 
 						findDestinationFloors(waitingListForCurrentFloor);
 				this.destinations  = destinationFloorsForCurrentFloor;
-				return this.destinations;
+				return this.destinations ;
     		}
     	}
 		

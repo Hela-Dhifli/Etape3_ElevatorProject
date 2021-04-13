@@ -61,7 +61,7 @@ public class HelpingEfficientElevator implements Elevator {
     	if(this.efficient.isImBusy() && countWaintingPeopleInFloorOne() > 0) {
     		if(this.currentFloor == 1) {
     			List<Person> waitingListForCurrentFloor = 
-						this.peopleByFloor.get(0);
+						this.peopleByFloor.get(0) ;
 				
 				List<Integer> destinationFloorsForCurrentFloor = 
 						findDestinationFloors(waitingListForCurrentFloor);
